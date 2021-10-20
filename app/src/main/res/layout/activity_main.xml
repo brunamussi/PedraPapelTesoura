@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8F009688"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Escolha do Bot"
+        android:layout_marginTop="40dp"
+        android:text="@string/escolha_do_bot"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:contentDescription="@string/escolha_do_bot"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,8 +36,9 @@
         android:id="@+id/Resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Escolha uma opção abaixo:"
+        android:layout_marginTop="40dp"
+        android:text="@string/escolha_uma_op_o_abaixo"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +51,7 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="30dp"
         android:onClick="pedraSelecionado"
+        android:outlineSpotShadowColor="#FFEB3B"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +63,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="28dp"
+        android:contentDescription="TODO"
         android:onClick="papelSelecionado"
         app:layout_constraintEnd_toStartOf="@+id/imageView4"
         app:layout_constraintHorizontal_bias="0.5"
@@ -71,11 +77,28 @@
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="22dp"
+        android:contentDescription="TODO"
         android:onClick="tesouraSelecionado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/Resultado"
         app:srcCompat="@drawable/tesoura" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:outlineAmbientShadowColor="#026574"
+        android:outlineSpotShadowColor="#026574"
+        android:elevation="10dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:text="SCORE" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
