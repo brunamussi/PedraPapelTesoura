@@ -11,10 +11,10 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:text="@string/escolha_do_bot"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,12 +22,12 @@
 
     <ImageView
         android:id="@+id/imageResultado"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="12dp"
         android:contentDescription="@string/escolha_do_bot"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:srcCompat="@drawable/padrao" />
@@ -36,11 +36,12 @@
         android:id="@+id/Resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="@string/escolha_uma_op_o_abaixo"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageResultado" />
 
@@ -49,7 +50,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:onClick="pedraSelecionado"
         android:outlineSpotShadowColor="#FFEB3B"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
@@ -62,7 +63,7 @@
         android:id="@+id/imageView3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="25dp"
         android:contentDescription="TODO"
         android:onClick="papelSelecionado"
         app:layout_constraintEnd_toStartOf="@+id/imageView4"
@@ -75,7 +76,7 @@
         android:id="@+id/imageView4"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="22dp"
         android:contentDescription="TODO"
         android:onClick="tesouraSelecionado"
@@ -86,27 +87,26 @@
         app:srcCompat="@drawable/tesoura" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:elevation="10dp"
-        android:outlineAmbientShadowColor="#026574"
-        android:outlineSpotShadowColor="#026574"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:text="Score"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:text="SCORE" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="117dp"
-        android:layout_height="90dp"
-        app:srcCompat="@drawable/unissex"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="500dp" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
