@@ -2,4 +2,12 @@
     <string name="app_name">PedraPapelTesoura</string>
     <string name="escolha_do_bot">Escolha do Bot</string>
     <string name="escolha_uma_op_o_abaixo">Escolha uma opção abaixo:</string>
+    <string name="score1">score</string>
+    <string name="score2">score</string>
+    <string name="iconUsuario">TODO</string>
+    <string name="iconbot">IconBot</string>
+    <string name="score">Score</string>
+    <string name="tesoura">TODO</string>
+    <string name="papel">TODO</string>
+    <string name="pedra">TODO</string>
 </resources>

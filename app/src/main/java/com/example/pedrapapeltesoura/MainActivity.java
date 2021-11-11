@@ -9,6 +9,10 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import static java.lang.Integer.getInteger;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.valueOf;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void pedraSelecionado (View view) {
+    public void pedraSelecionado(View view) {
         this.opcaoSelecionada("pedra");
     }
 
-    public void papelSelecionado (View view) {
+    public void papelSelecionado(View view) {
         this.opcaoSelecionada("papel");
     }
 
@@ -29,16 +33,16 @@ public class MainActivity extends AppCompatActivity {
         this.opcaoSelecionada("tesoura");
     }
 
-    public void opcaoSelecionada (String opcaoSelecionada){
+    public void opcaoSelecionada(String opcaoSelecionada) {
 
         int numero = new Random().nextInt(3);
 
         String[] opcoes = {"pedra", "papel", "tesoura"};
-        String opcaoApp = opcoes [numero];
+        String opcaoApp = opcoes[numero];
 
         ImageView imageResultado = findViewById(R.id.imageResultado);
 
-        switch (opcaoApp){
+        switch (opcaoApp) {
             case "pedra":
                 imageResultado.setImageResource(R.drawable.pedra);
                 break;
@@ -49,25 +53,28 @@ public class MainActivity extends AppCompatActivity {
                 imageResultado.setImageResource(R.drawable.tesoura);
                 break;
         }
-
         TextView Resultado = findViewById(R.id.Resultado);
+        TextView scoreBot = findViewById(R.id.scoreBot);
+        TextView scorePlayer = findViewById(R.id.scorePlayer);
 
-        if( // App ganha
-                    (opcaoApp == "tesoura" && opcaoSelecionada == "papel") ||
-                    (opcaoApp == "papel" && opcaoSelecionada =="pedra") ||
-                    (opcaoApp == "pedra" && opcaoSelecionada =="tesoura")
-        ){
+        if ( // App ganha
+                        (opcaoApp == "tesoura" && opcaoSelecionada == "papel") ||
+                        (opcaoApp == "papel" && opcaoSelecionada == "pedra") ||
+                        (opcaoApp == "pedra" && opcaoSelecionada == "tesoura")
+        ) {
             Resultado.setText("Que pena, você perdeu =(");
-        }
-        else if ( //usuario ganha
+            scoreBot.setText(String.valueOf(+1));
+
+        } else if ( //usuario ganha
                         (opcaoApp == "tesoura" && opcaoSelecionada == "pedra") ||
                         (opcaoApp == "papel" && opcaoSelecionada == "tesoura") ||
                         (opcaoApp == "pedra" && opcaoSelecionada == "papel")
-                ){
+        ) {
             Resultado.setText("Parabéns, você venceu (=");
+            scorePlayer.setText(String.valueOf(+1));
 
-        }else { // empate
-            Resultado.setText ("Deu empate, tente novamente!");
+        } else { // empate
+            Resultado.setText("Deu empate, tente novamente!");
         }
     }
-    }
+}
