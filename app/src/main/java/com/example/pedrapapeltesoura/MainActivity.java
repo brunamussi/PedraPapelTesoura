@@ -9,11 +9,15 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import static java.lang.Integer.bitCount;
 import static java.lang.Integer.getInteger;
 import static java.lang.Integer.parseInt;
 import static java.lang.Integer.valueOf;
 
 public class MainActivity extends AppCompatActivity {
+
+    int pontuacaoBot =  0;
+    int pontuacaoPlayer = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
                         (opcaoApp == "pedra" && opcaoSelecionada == "tesoura")
         ) {
             Resultado.setText("Que pena, você perdeu =(");
-            scoreBot.setText(String.valueOf(+1));
+            pontuacaoBot = pontuacaoBot + 1;
+           scoreBot.setText(String.valueOf(pontuacaoBot));
 
         } else if ( //usuario ganha
                         (opcaoApp == "tesoura" && opcaoSelecionada == "pedra") ||
@@ -71,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
                         (opcaoApp == "pedra" && opcaoSelecionada == "papel")
         ) {
             Resultado.setText("Parabéns, você venceu (=");
-            scorePlayer.setText(String.valueOf(+1));
+            pontuacaoPlayer = pontuacaoPlayer + 1;
+            scorePlayer.setText(String.valueOf(pontuacaoPlayer));
 
         } else { // empate
             Resultado.setText("Deu empate, tente novamente!");
