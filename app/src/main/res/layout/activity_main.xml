@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A2009688"
+    android:background="#A204816A"
     tools:context=".MainActivity">
 
     <TextView
@@ -153,10 +153,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="190dp"
         android:background="@drawable/custom_button"
+        android:onClick="resetButtom"
         android:text="Reset Score"
-        android:textSize="20sp"
-        android:textColor="#ffffff"
         android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />

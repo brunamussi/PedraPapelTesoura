@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextClock;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -26,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pedraSelecionado(View view) {
+
         this.opcaoSelecionada("pedra");
     }
 
     public void papelSelecionado(View view) {
+
         this.opcaoSelecionada("papel");
     }
 
@@ -83,4 +86,12 @@ public class MainActivity extends AppCompatActivity {
             Resultado.setText("Deu empate, tente novamente!");
         }
     }
+     public void resetButtom (View view) {
+        TextView scoreBot = findViewById(R.id.scoreBot);
+        TextView scorePlayer = findViewById(R.id.scorePlayer);
+
+        scoreBot.setText(String.valueOf(0));
+        scorePlayer.setText(String.valueOf(0));
+     }
+
 }
