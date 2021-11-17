@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         ) {
             Resultado.setText("Que pena, você perdeu =(");
             pontuacaoBot = pontuacaoBot + 1;
-           scoreBot.setText(String.valueOf(pontuacaoBot));
+            scoreBot.setText(String.valueOf(pontuacaoBot));
 
         } else if ( //usuario ganha
                         (opcaoApp == "tesoura" && opcaoSelecionada == "pedra") ||
@@ -90,8 +90,10 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreBot = findViewById(R.id.scoreBot);
         TextView scorePlayer = findViewById(R.id.scorePlayer);
 
-        scoreBot.setText(String.valueOf(0));
-        scorePlayer.setText(String.valueOf(0));
-     }
+        pontuacaoBot = 0;
+        pontuacaoPlayer = 0;
 
+        scoreBot.setText(String.valueOf(pontuacaoBot));
+        scorePlayer.setText(String.valueOf(pontuacaoPlayer));
+     }
 }
