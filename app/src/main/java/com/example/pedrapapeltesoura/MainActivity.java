@@ -19,11 +19,18 @@ public class MainActivity extends AppCompatActivity {
 
     int pontuacaoBot =  0;
     int pontuacaoPlayer = 0;
+    private TextView scoreBot;
+    private TextView scorePlayer;
+    private TextView Resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+       Resultado = findViewById(R.id.Resultado);
+       scoreBot = findViewById(R.id.scoreBot);
+       scorePlayer = findViewById(R.id.scorePlayer);
     }
 
     public void pedraSelecionado(View view) {
@@ -60,9 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 imageResultado.setImageResource(R.drawable.tesoura);
                 break;
         }
-        TextView Resultado = findViewById(R.id.Resultado);
-        TextView scoreBot = findViewById(R.id.scoreBot);
-        TextView scorePlayer = findViewById(R.id.scorePlayer);
 
         if ( // App ganha
                         (opcaoApp == "tesoura" && opcaoSelecionada == "papel") ||
@@ -87,12 +91,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
      public void resetButtom (View view) {
-        TextView scoreBot = findViewById(R.id.scoreBot);
-        TextView scorePlayer = findViewById(R.id.scorePlayer);
-
         pontuacaoBot = 0;
         pontuacaoPlayer = 0;
-
         scoreBot.setText(String.valueOf(pontuacaoBot));
         scorePlayer.setText(String.valueOf(pontuacaoPlayer));
      }
