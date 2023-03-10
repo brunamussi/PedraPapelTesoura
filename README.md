@@ -1,16 +1,19 @@
 # Pedra, Papel e Tesoura &#x1F48E; 	&#x1F9FB; &#x2702;&#xFE0F;
 
-Este é um aplicativo onde simulamos um jogo de jokenpô contra um Bot. 
+Este é um aplicativo que simula o jogo jokenpô contra um Bot. 
 
-O APP possui apenas uma tela com os seguintes conceitos de Interface:
-* Image View
-* Text View
-* Custom Button
+O APP possui duas telas tela com os seguintes conceitos:
+* Layout
+* Activity
+* Arrays
+* Estruturas Condicionais
+* Switch
+* Construtores
 
-Para este projeto, foi necessario criar uma lista de Strings que pudesse gerar de forma aleatória uma opção para o Bot, atualizando automaticamente a ImageView de sua escolha. 
-Logo após, é utilizado uma condicional para gerar os possíveis resultados da escolha do Bot VS Player.
 
-![Android Emulator - Pixel_2_API_29_5554 21_06_2022 15_49_53](https://user-images.githubusercontent.com/81832122/174876216-f8c88e01-1c39-429a-9211-a8650fdc0b05.png)
+![TELA1](https://user-images.githubusercontent.com/81832122/224390560-1fdb351f-9266-49c0-8c9d-0d53a751fa76.png)
+
+![TELA2](https://user-images.githubusercontent.com/81832122/224390587-d14f233c-c65a-4984-87a5-92cfdd96dfc0.png)
 
 
 ## 🎁 Expressões de gratidão
